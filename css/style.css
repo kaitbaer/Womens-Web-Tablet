@@ -1,0 +1,199 @@
+a.skip{
+    background: white;
+    position: absolute;
+    left: -400px;
+    top: -200px;
+}
+#books{
+    background-image: url(../images/Bookbackground.jpg);
+}
+h1{
+    font-family: "Righteous", Verdana;
+}
+#red,#orange,#yellow,#green,#blue,#purple{
+    visibility: visible;
+    padding-left: 50px;
+    padding-bottom: 50px;
+}
+#red{
+    color: #FF0018;
+}
+#orange{
+    color:#FFA52C;
+}
+#yellow{
+    color:#FFFF41;
+}
+#green{
+    color:#008018;
+}
+#blue{
+    color:#0000F9;
+}
+#purple{
+    color:#86007D;
+}
+@keyframes animation{
+    from {border:10px solid #700B42;
+    left:-200px}
+    to {border:10px solid #0b1570;
+    left:0px}
+}
+#about-image{
+    animation-name: animation;
+    animation-duration: 4s;
+    position: relative;
+    width:70%;
+}
+body {
+    background-color: white;
+    font-family: Verdana, 'Lucida Sans';
+}
+
+p{
+    color:#795D1C;
+    font-size: 15px;
+    padding:15px;
+    margin: 20px;
+}
+
+h1{
+    color:#00646F;
+    font-size: 65px;
+    font-style: oblique;
+    text-align: center;
+    padding:40px;
+    font-weight: bold;
+}
+h2{
+    color:black;
+    text-align: center;
+    font-size: x;
+    text-transform: capitalize;
+    padding: 30px;
+    font-size: 30px;
+}
+dt{
+    color: black;
+    padding: 20px;
+}
+
+dd{
+    color: black;
+}
+
+h3{
+    color: black;
+    font-size: 25px;
+    padding: 30px;
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav{
+    background-color: black;
+}
+
+li{
+    display: inline-block;
+    margin:20px;
+    padding: 10px;
+}
+a.active{
+    color: #BDA709;
+    padding: 10px;
+}
+.intro{
+    text-align: left;
+    color: #700B42;
+    font-size: 10px;
+    padding: 15px;
+}
+@media (prefers-reduced-motion: reduce){
+    #about-image{
+        animation:none;
+    }
+}
+#red,#orange,#yellow,#green,#blue,#purple{
+    visibility: hidden;
+}
+.indexgrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.literature{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.history-politics{
+    grid-column: 1/2;
+}
+.dict{
+    grid-row: 3/4;
+}
+.Author,.History{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+.Author,.History{
+    background-color: #f0ffff;
+}
+
+.Dictionary{
+    display: flex;
+}
+img{
+    width: 50%;
+    display:block;
+    margin:auto;
+    padding: 4px;
+    border: 10px solid #700B42;
+    border-radius: 30px;
+}
+footer>p{
+    font-size: 8px;
+    color: black;
+}
+@media only screen and (min-width: 600px){
+    .indexgrid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .literature,.history-politics{
+        grid-row: 1/2;
+        grid-column: auto;
+    }
+    .dict{
+        grid-area: auto;
+    }
+    .Author,.History{
+        grid-template-columns: 1fr 1fr;
+    }
+    h1{
+        font-size: 80px;
+    }
+    }
+@media only screen and (min-width: 1024px){
+    img:nth-child(3n){
+        border: 3px dashed rgb(255, 233, 213);
+        }
+    img:hover{
+        border: 10px solid rgb(0, 194, 219);
+        }
+    .indexgrid{
+            display: flex;
+            align-self: center;
+        }
+    .Author,.History{
+            grid-template-columns: 1fr 1fr 1fr;
+            margin: auto;
+            width:90%;
+            column-gap: 2em;
+        }
+
+    }
